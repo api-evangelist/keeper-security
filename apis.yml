@@ -1,8 +1,29 @@
 aid: keeper-security
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/keeper-security.png
 name: Keeper Security
-description: 'Keeper Security is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Keeper Security is a zero-knowledge cybersecurity company providing an
+  enterprise password manager, privileged access management (KeeperPAM), secrets
+  management, and dark-web monitoring. For developers, Keeper exposes Keeper
+  Secrets Manager (KSM) — a cloud-based, zero-knowledge platform for securing
+  infrastructure secrets such as API keys, database passwords, and certificates —
+  through a multi-language SDK family (Python, JavaScript/Node, Java/Kotlin, .NET,
+  Go) and the Keeper Commander and KSM command-line interfaces. Keeper does not
+  publish a public REST OpenAPI; integration happens via these SDKs/CLIs, a
+  Commander Service Mode REST API, Terraform providers, and CI/CD plugins. Keeper
+  is FedRAMP High and SOC 2 Type 2 certified with ISO 27001/27017/27018, FIPS
+  140-3, PCI DSS Level 1, HIPAA, and GDPR compliance.
 url: https://raw.githubusercontent.com/api-evangelist/keeper-security/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +33,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Cybersecurity
+- Secrets Management
+- Password Manager
+- Privileged Access Management
+- Zero Knowledge
+- Security
+- SDK
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,54 @@ maintainers:
 common:
 - type: Website
   url: https://www.keepersecurity.com/
+- type: DeveloperPortal
+  url: https://docs.keeper.io/home/
+- type: Documentation
+  url: https://docs.keeper.io/home/
+- type: GitHubOrganization
+  url: https://github.com/Keeper-Security
+- type: Blog
+  url: https://www.keepersecurity.com/blog/
+- type: Support
+  url: https://www.keepersecurity.com/support/
+- type: Pricing
+  url: https://www.keepersecurity.com/pricing/
+- type: Login
+  url: https://keepersecurity.com/vault/
+- type: TermsOfService
+  url: https://www.keepersecurity.com/terms.html
+- type: PrivacyPolicy
+  url: https://www.keepersecurity.com/privacypolicy.html
+- type: StatusPage
+  url: https://statuspage.keeper.io/
+- type: Security
+  url: https://keepersecurity.com/security.html
+- type: Compliance
+  url: https://trust.keeper.io/
+- type: Packages
+  url: packages/keeper-security-packages.yml
+- type: SDKs
+  url: packages/keeper-security-packages.yml
+- type: CLI
+  url: cli/keeper-security-cli.yml
+- type: WellKnown
+  url: well-known/keeper-security-well-known.yml
+- type: SecurityTxt
+  url: well-known/keeper-security-security.txt
+- type: DomainSecurity
+  url: security/keeper-security-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/keeper-security-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/keeper-security-trust-center.yml
+- type: Conformance
+  url: conformance/keeper-security-conformance.yml
+- type: Lifecycle
+  url: lifecycle/keeper-security-lifecycle.yml
+- type: LLMsTxt
+  url: llms/keeper-security-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
