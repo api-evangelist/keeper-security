@@ -1,0 +1,36 @@
+# Keeper Security
+
+> Keeper Security is a zero-knowledge cybersecurity company providing an enterprise password manager, privileged access management (KeeperPAM), and Keeper Secrets Manager (KSM) for securing infrastructure secrets. Its developer surface is a multi-language SDK family plus the Keeper Commander and KSM command-line interfaces, rather than a public REST API.
+
+## Products
+
+- [Keeper Secrets Manager (KSM)](https://docs.keeper.io/en/keeperpam/secrets-manager): Cloud-based, zero-knowledge platform for securing infrastructure secrets (API keys, passwords, certificates) with client-side encryption and CI/CD injection.
+- [Keeper Commander](https://docs.keeper.io/en/keeperpam/commander-cli): Python CLI and SDK for vault access, enterprise administration, and automated password rotation.
+- [KeeperPAM](https://docs.keeper.io/en/keeperpam): Privileged access management including Connection Manager and KeeperDB.
+
+## SDKs
+
+- Python (KSM core): https://pypi.org/project/keeper-secrets-manager-core/
+- JavaScript / Node: https://www.npmjs.com/package/@keeper-security/secrets-manager-core
+- Java / Kotlin: https://central.sonatype.com/artifact/com.keepersecurity.secrets-manager/core
+- .NET / C#: https://www.nuget.org/packages/Keeper.SecretsManager
+- Go: https://pkg.go.dev/github.com/keeper-security/secrets-manager-go/core
+
+## CLI
+
+- Keeper Commander (keeper): https://pypi.org/project/keepercommander/
+- Keeper Secrets Manager CLI (ksm): https://pypi.org/project/keeper-secrets-manager-cli/
+
+## Docs
+
+- [Developer documentation](https://docs.keeper.io/)
+- [SDK library](https://docs.keeper.io/en/keeperpam/secrets-manager/developer-sdk-library)
+- [GitHub organization](https://github.com/Keeper-Security)
+
+## Security & Trust
+
+- [Security & compliance](https://keepersecurity.com/security.html) — SOC 2 Type 2, ISO 27001/27017/27018, FedRAMP High, FIPS 140-3, PCI DSS Level 1, HIPAA, GDPR.
+- [Trust center](https://trust.keeper.io/)
+- [Vulnerability disclosure (Bugcrowd)](https://bugcrowd.com/engagements/keepersecurity)
+- [security.txt](https://www.keepersecurity.com/.well-known/security.txt)
+- [Status page](https://statuspage.keeper.io/)

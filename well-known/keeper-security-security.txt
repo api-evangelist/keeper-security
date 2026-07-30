@@ -1,0 +1,8 @@
+Contact: https://bugcrowd.com/engagements/keepersecurity
+Policy: https://keepersecurity.com/security.html
+Acknowledgments: https://bugcrowd.com/engagements/keepersecurity/hall_of_fames
+Hiring: https://apply.workable.com/keepersecurity/
+Expires: 2026-12-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://keepersecurity.com/.well-known/security.txt
+Canonical: https://www.keepersecurity.com/.well-known/security.txt

@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://keepersecurity.com/security.html
+notes: >-
+  Keeper is a zero-knowledge security vendor; conformance here reflects published
+  security/compliance certifications rather than a REST API standards profile (no
+  public OpenAPI is published). Attestations are available via the trust center
+  (https://trust.keeper.io/).
+standards:
+  - id: soc2-type2
+    conforms: true
+    evidence: SOC 2 Type 2 attested (10+ years), listed on security.html and trust.keeper.io
+  - id: iso-27001
+    conforms: true
+    evidence: ISO 27001 certified
+  - id: iso-27017
+    conforms: true
+    evidence: ISO 27017 certified
+  - id: iso-27018
+    conforms: true
+    evidence: ISO 27018 certified
+  - id: fedramp-high
+    conforms: true
+    evidence: FedRAMP High authorized
+  - id: fips-140-3
+    conforms: true
+    evidence: FIPS 140-3 validated
+  - id: pci-dss
+    conforms: true
+    evidence: PCI DSS Level 1
+  - id: hipaa
+    conforms: true
+    evidence: HIPAA compliant
+  - id: gdpr
+    conforms: true
+    evidence: GDPR compliant
+  - id: cmmc-level-1
+    conforms: true
+    evidence: CMMC Level 1
+  - id: oauth2
+    conforms: false
+    evidence: no public OpenAPI declaring oauth2 security schemes
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: no public OpenAPI to assert problem+json error envelope

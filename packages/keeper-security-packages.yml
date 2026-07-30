@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.keeper.io/en/keeperpam/secrets-manager/developer-sdk-library
+notes: >-
+  Keeper does not publish a public REST OpenAPI. Its developer surface is the
+  Keeper Secrets Manager (KSM) zero-knowledge SDK family plus the Keeper
+  Commander CLI/SDK. All packages below are first-party (owner "Keeper Security
+  Inc." on each registry). Versions captured at harvest time; the registry is the
+  source of truth.
+packages:
+  - language: python
+    registry: pypi
+    name: keepercommander
+    url: https://pypi.org/project/keepercommander/
+    install: pip install keepercommander
+    version: 18.0.13
+    repository: https://github.com/Keeper-Security/Commander
+    official: true
+    kind: cli-sdk
+  - language: python
+    registry: pypi
+    name: keeper-secrets-manager-core
+    url: https://pypi.org/project/keeper-secrets-manager-core/
+    install: pip install keeper-secrets-manager-core
+    repository: https://github.com/Keeper-Security/secrets-manager
+    official: true
+    kind: sdk
+  - language: python
+    registry: pypi
+    name: keeper-secrets-manager-cli
+    url: https://pypi.org/project/keeper-secrets-manager-cli/
+    install: pip install keeper-secrets-manager-cli
+    version: 1.4.0
+    binary: ksm
+    repository: https://github.com/Keeper-Security/secrets-manager
+    official: true
+    kind: cli
+  - language: javascript
+    registry: npm
+    name: "@keeper-security/secrets-manager-core"
+    url: https://www.npmjs.com/package/@keeper-security/secrets-manager-core
+    install: npm install @keeper-security/secrets-manager-core
+    repository: https://github.com/Keeper-Security/secrets-manager
+    official: true
+    kind: sdk
+  - language: java
+    registry: maven-central
+    name: com.keepersecurity.secrets-manager:core
+    url: https://central.sonatype.com/artifact/com.keepersecurity.secrets-manager/core
+    install: 'implementation "com.keepersecurity.secrets-manager:core:17.3.0"'
+    version: 17.3.0
+    repository: https://github.com/Keeper-Security/secrets-manager
+    official: true
+    kind: sdk
+  - language: dotnet
+    registry: nuget
+    name: Keeper.SecretsManager
+    url: https://www.nuget.org/packages/Keeper.SecretsManager
+    install: dotnet add package Keeper.SecretsManager --version 17.1.2
+    version: 17.1.2
+    repository: https://github.com/Keeper-Security/secrets-manager
+    official: true
+    kind: sdk
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/keeper-security/secrets-manager-go/core
+    url: https://pkg.go.dev/github.com/keeper-security/secrets-manager-go/core
+    install: go get github.com/keeper-security/secrets-manager-go/core
+    version: v1.7.0
+    repository: https://github.com/Keeper-Security/secrets-manager-go
+    official: true
+    kind: sdk

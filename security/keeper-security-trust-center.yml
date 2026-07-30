@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+url: https://trust.keeper.io/
+source: https://keepersecurity.com/security.html
+certifications:
+  - SOC 2 Type 2
+  - SOC 3
+  - ISO 27001
+  - ISO 27017
+  - ISO 27018
+  - FedRAMP High
+  - GovRAMP High
+  - TX-RAMP
+  - FIPS 140-3
+  - PCI DSS Level 1
+  - HIPAA
+  - GDPR
+  - CCPA
+  - CMMC Level 1
+  - 21 CFR Part 11
+  - ITAR
+  - TrustArc
+  - FSQS-NL
+independent_testing:
+  - NCC Group (penetration testing)
+  - Cybertest (penetration testing)
+evidence:
+  - source: https://keepersecurity.com/security.html
+    keywords: [soc 2, iso 27001, fedramp high, fips 140-3, pci dss, hipaa]
+  - source: https://trust.keeper.io/
+    keywords: [trust center, compliance]

@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: searched
+source: https://keepersecurity.com/security.html
+status_page: https://statuspage.keeper.io/
+support: security@keepersecurity.com
+notes: >-
+  Keeper publishes a hosted status page for platform availability. SDK/CLI
+  versioning is tracked per package on GitHub (Keeper Commander, Keeper Secrets
+  Manager). No public REST API deprecation/Sunset-header policy is published, so
+  no deprecated_operations are derivable (no public OpenAPI).
+versioning:
+  scheme: per-package-semver
+  docs: https://github.com/Keeper-Security
+deprecation:
+  policy_url: null
+  sunset_header: null
