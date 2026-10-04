@@ -139,19 +139,30 @@ common:
   url: llms/keeper-security-llms.txt
 
 apis:
-- aid: keeper-security:keeper-security-api
-  name: Keeper Security API
-  description: 'Keeper Security API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-04);
-    not the provider''s own document.'
+- aid: keeper-security:keeper-security-bi-api-api
+  name: Keeper Security Bi API
+  description: The Bi Api API from Keeper Security — 1 operation(s) for bi api.
   humanURL: https://docs.keeper.io/en/keeperpam/commander-cli/service-mode-rest-api
-  baseURL: https://keepersecurity.com
+  tags:
+  - Bi Api
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/keeper-security-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/keeper-security-bi-api-api-openapi.yml
   - type: JSONSchema
-    url: json-schema/keeper-security-get-bi-api-v1-services-partner-create-license-response-schema.json
-
+    url: >-
+      json-schema/keeper-security-get-bi-api-v1-services-partner-create-license-response-schema.json
+- aid: keeper-security:keeper-security-health-api
+  name: Keeper Security Health API
+  description: The Health API from Keeper Security — 1 operation(s) for health.
+  humanURL: https://docs.keeper.io/en/keeperpam/commander-cli/service-mode-rest-api
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/keeper-security-health-api-openapi.yml
+  - type: JSONSchema
+    url: >-
+      json-schema/keeper-security-get-bi-api-v1-services-partner-create-license-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

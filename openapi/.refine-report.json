@@ -1,0 +1,19 @@
+{
+  "provider": "keeper-security",
+  "sources": [
+    "_ae-authored/keeper-security-openapi-generated.yml"
+  ],
+  "outputs": [
+    "keeper-security-bi-api-api-openapi.yml",
+    "keeper-security-health-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "keeper-security-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+2 apis, 2 total)"
+  ],
+  "skipped": []
+}

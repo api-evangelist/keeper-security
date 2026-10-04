@@ -1,0 +1,92 @@
+openapi: 3.2.0
+info:
+  title: Keeper Security Bi API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 2 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Keeper Security has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 1
+    pages-with-code: 1
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.keeper.io/en/keeperpam/commander-cli/service-mode-rest-api
+  - https://docs.keeper.io/en/enterprise-guide/personal-vaults-for-enterprise-and-business-users/provision-family-plans-via-api
+  - https://docs.keeper.io/en/enterprise-guide/personal-vaults-for-enterprise-and-business-users/provision-student-plans-via-api
+servers:
+- url: https://keepersecurity.com
+tags:
+- name: Bi Api
+paths:
+  /bi_api/v1/services/partner/create-license:
+    get:
+      operationId: get_bi_api_v1_services_partner_create_license
+      tags:
+      - Bi Api
+      summary: Provision Family Plans Using the API
+      x-source: https://docs.keeper.io/en/enterprise-guide/personal-vaults-for-enterprise-and-business-users/provision-family-plans-via-api
+      parameters:
+      - name: transaction_id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Partner Transaction Id (external Id used by the partner as a reference)
+      - name: first_name
+        in: query
+        required: true
+        schema:
+          type: string
+        description: First name of user
+      - name: last_name
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Last name of user
+      - name: email
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Email of user
+      - name: hash
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Salted hash, hash = SHA256.hexdigest.bytesToHex(email + salt )
+      - name: partner_name
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Keeper will provide the expected partner name along with the salt ("secret")
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetBiApiV1ServicesPartnerCreateLicenseResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetBiApiV1ServicesPartnerCreateLicenseResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Optional
+        order_number:
+          type: string
+          description: Optional Keeper Order Number for reference
+        vault_url:
+          type: string
+          description: Optional Link to send to the User to create the vault account with the email used in this API call
