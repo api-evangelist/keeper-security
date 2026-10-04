@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "@vocab": "https://keepersecurity.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "keeper": "https://keepersecurity.com/schema#",
+    "GetBiApiV1ServicesPartnerCreateLicenseResponse": "keeper:GetBiApiV1ServicesPartnerCreateLicenseResponse",
+    "success": {
+      "@id": "keeper:success",
+      "@type": "xsd:boolean"
+    },
+    "order_number": {
+      "@id": "keeper:order_number",
+      "@type": "xsd:string"
+    },
+    "vault_url": {
+      "@id": "keeper:vault_url",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Keeper Security API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Keeper Security's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-04) from openapi/_ae-authored/keeper-security-openapi-generated.yml.",
+  "dcterms:created": "2026-10-04",
+  "dcterms:source": [
+    "openapi/_ae-authored/keeper-security-openapi-generated.yml"
+  ]
+}

@@ -1,0 +1,41 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.keepersecurity.com/pricing/keeperpam/
+sources:
+- https://www.keepersecurity.com/pricing/keeperpam/
+- https://www.keepersecurity.com/pricing/business-and-enterprise.html
+- https://www.keepersecurity.com/pricing/business-add-ons/
+- https://www.keepersecurity.com/pricing/personal-and-family.html
+name: Keeper Security pricing
+audience: business-product
+pricing_basis: negotiated
+plans:
+- name: Tier 1
+  price_text: Contact Sales
+  description: Foundational protection for organizations beginning to scale
+- name: Tier 2
+  price_text: Contact Sales
+  description: Enhanced coverage for growing environments with multiple workloads
+- name: Tier 3
+  price_text: Contact Sales
+  description: Advanced protection for complex, multi-agent deployments
+- name: Enterprise
+  price_text: Contact Sales
+  description: Full-scale, mission-critical NHI security for the most demanding environments
+- name: Business Starter
+  price_text: user / month billed annually *zzgl MwSt *Includes GST
+  description: Protects sole proprietors and small teams
+- name: Business Password Manager
+  price_text: user / month billed annually *zzgl MwSt *Includes GST
+  description: Company-wide security, visibility and administration
+- name: Enterprise Password Manager
+  price_text: user / month billed annually *zzgl MwSt *Includes GST
+  description: Advanced provisioning, RBAC and governance
+- name: Keeper Unlimited
+  price_text: / month
+  description: Personal password manager
+- name: Keeper Family
+  price_text: / month
+  description: Family password manager
+docs: https://www.keepersecurity.com/pricing/keeperpam/

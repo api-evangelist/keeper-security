@@ -1,18 +1,13 @@
 generated: '2026-07-19'
 method: searched
 source: https://docs.keeper.io/en/keeperpam/commander-cli
-notes: >-
-  Keeper ships two first-party CLIs: Keeper Commander (full vault + admin +
-  KeeperPAM surface, Python) and the KSM CLI (`ksm`, focused on Keeper Secrets
-  Manager). Binaries are catalogued in packages/.
-clis:
+install: []
+commands:
   - name: Keeper Commander
     command: keeper
     package: keepercommander
     registry: pypi
     version: 18.0.13
-    install:
-      - pip install keepercommander
     repository: https://github.com/Keeper-Security/Commander
     docs: https://docs.keeper.io/en/keeperpam/commander-cli
     capabilities:
@@ -27,8 +22,6 @@ clis:
     package: keeper-secrets-manager-cli
     registry: pypi
     version: 1.4.0
-    install:
-      - pip install keeper-secrets-manager-cli
     repository: https://github.com/Keeper-Security/secrets-manager
     docs: https://docs.keeper.io/en/keeperpam/secrets-manager
     capabilities:

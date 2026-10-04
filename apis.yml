@@ -1,4 +1,5 @@
 aid: keeper-security
+
 deliveryModel:
   model: saas
   open_source: false
@@ -10,6 +11,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -21,30 +23,36 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/keeper-security.png
+
 name: Keeper Security
-description: >-
-  Keeper Security is a zero-knowledge cybersecurity company providing an
-  enterprise password manager, privileged access management (KeeperPAM), secrets
-  management, and dark-web monitoring. For developers, Keeper exposes Keeper
-  Secrets Manager (KSM) — a cloud-based, zero-knowledge platform for securing
-  infrastructure secrets such as API keys, database passwords, and certificates —
-  through a multi-language SDK family (Python, JavaScript/Node, Java/Kotlin, .NET,
-  Go) and the Keeper Commander and KSM command-line interfaces. Keeper does not
-  publish a public REST OpenAPI; integration happens via these SDKs/CLIs, a
-  Commander Service Mode REST API, Terraform providers, and CI/CD plugins. Keeper
-  is FedRAMP High and SOC 2 Type 2 certified with ISO 27001/27017/27018, FIPS
-  140-3, PCI DSS Level 1, HIPAA, and GDPR compliance.
+
+description: Keeper Security is a zero-knowledge cybersecurity company providing an enterprise password manager, privileged access management
+  (KeeperPAM), secrets management, and dark-web monitoring. For developers, Keeper exposes Keeper Secrets Manager (KSM) — a cloud-based, zero-knowledge
+  platform for securing infrastructure secrets such as API keys, database passwords, and certificates — through a multi-language SDK family (Python,
+  JavaScript/Node, Java/Kotlin, .NET, Go) and the Keeper Commander and KSM command-line interfaces. Keeper does not publish a public REST OpenAPI;
+  integration happens via these SDKs/CLIs, a Commander Service Mode REST API, Terraform providers, and CI/CD plugins. Keeper is FedRAMP High and
+  SOC 2 Type 2 certified with ISO 27001/27017/27018, FIPS 140-3, PCI DSS Level 1, HIPAA, and GDPR compliance.
+
 url: https://raw.githubusercontent.com/api-evangelist/keeper-security/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: vc-portfolio
+
 x-backed-by:
 - insight-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-04 (modular-v1; was portfolio-lead)
+
 specificationVersion: '0.23'
+
 created: '2026-07-17'
+
 modified: '2026-07-19'
+
 tags:
 - Company
 - Cybersecurity
@@ -54,13 +62,36 @@ tags:
 - Zero Knowledge
 - Security
 - SDK
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: TermsOfService
+  url: https://www.keepersecurity.com/legal/terms-of-use/
+- type: Plans
+  url: plans/keeper-security-plans-pricing.yml
+- type: Spectral
+  url: rules/keeper-security-rules.yml
+- type: JSONLD
+  url: json-ld/keeper-security-context.jsonld
+- type: Vocabulary
+  url: vocabulary/keeper-security-vocabulary.yml
+- type: DataModel
+  url: data-model/keeper-security-data-model.yml
+- type: Hosts
+  url: hosts/keeper-security-hosts.yml
+- type: Vendors
+  url: vendors/keeper-security-vendors.yml
+- type: Sandbox
+  url: https://www.keepersecurity.com/console/
+- type: Newsroom
+  url: https://www.keepersecurity.com/company/press/?t=news
+- type: GettingStarted
+  url: https://www.keepersecurity.com/getting-started/
 - type: Website
   url: https://www.keepersecurity.com/
 - type: DeveloperPortal
@@ -73,12 +104,8 @@ common:
   url: https://www.keepersecurity.com/blog/
 - type: Support
   url: https://www.keepersecurity.com/support/
-- type: Pricing
-  url: https://www.keepersecurity.com/pricing/
 - type: Login
   url: https://keepersecurity.com/vault/
-- type: TermsOfService
-  url: https://www.keepersecurity.com/terms.html
 - type: PrivacyPolicy
   url: https://www.keepersecurity.com/privacypolicy.html
 - type: StatusPage
@@ -109,8 +136,35 @@ common:
   url: lifecycle/keeper-security-lifecycle.yml
 - type: LLMsTxt
   url: llms/keeper-security-llms.txt
+
+apis:
+- aid: keeper-security:keeper-security-api
+  name: Keeper Security API
+  description: 'Keeper Security API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-04);
+    not the provider''s own document.'
+  humanURL: https://docs.keeper.io/en/keeperpam/commander-cli/service-mode-rest-api
+  baseURL: https://keepersecurity.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/keeper-security-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/keeper-security-get-bi-api-v1-services-partner-create-license-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-10-04'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://www.keepersecurity.com/
+    status: 200
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
