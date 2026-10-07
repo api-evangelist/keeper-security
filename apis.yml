@@ -71,6 +71,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: Pricing
+  url: https://www.keepersecurity.com/pricing/keeperpam/
 - type: TermsOfService
   url: https://www.keepersecurity.com/legal/terms-of-use/
 - type: Plans
