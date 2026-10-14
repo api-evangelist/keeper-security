@@ -2,6 +2,8 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://azuremarketplace.microsoft.com/
+- https://github.com/marketplace?type=actions
+- https://marketplace.atlassian.com/
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -19,3 +21,39 @@ edges:
   seller_name: Keeper Security, Inc.
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: GitHub Marketplace (actions)
+  partner: github-actions
+  partner_match: aggregator
+  type: marketplace
+  marketplace: github-actions
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://github.com/marketplace/actions/keeper-secrets-manager-github-action
+  listing_count: 1
+  apps:
+  - Keeper Secrets Manager Github Action
+  publisher_name: Keeper Security
+  badges:
+  - Verified creator
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Atlassian Marketplace
+  partner: atlassian
+  partner_match: aggregator
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://marketplace.atlassian.com/vendors/1221175/keeper-security
+  listing_count: 2
+  apps:
+  - Keeper Security ITSM
+  - Keeper Secrets Manager for Bitbucket Pipeline
+  publisher_name: Keeper Security
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+source:
+- https://github.com/marketplace?type=actions
+- https://marketplace.atlassian.com/
