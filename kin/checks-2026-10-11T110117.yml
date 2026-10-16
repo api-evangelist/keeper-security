@@ -2,25 +2,21 @@
 kin_checks:
   slug: keeper-security
   schema_version: 0.23.0
-  scored_at: '2026-10-03'
-  run_ts: 2026-10-03T024842
+  scored_at: '2026-10-11'
+  run_ts: 2026-10-11T110117
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.23.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 153
-    earned: 23
-    partial: 2
-    missed: 82
-    na: 46
+    earned: 29
+    partial: 19
+    missed: 74
+    na: 31
   checks:
-  - id: newsroom_present
-    status: missed
   - id: leadership_present
     status: missed
   - id: multiple_apis
-    status: missed
-  - id: human_url_per_api
     status: missed
   - id: base_url_per_api
     status: missed
@@ -28,19 +24,49 @@ kin_checks:
     status: missed
   - id: apis_json_self_hosted
     status: missed
-  - id: contract_present
+  - id: openapi_3_1
     status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: openapi_3_0
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: info_complete
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
   - id: servers_resolvable
     status: missed
+  - id: operations_description_coverage
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: error_responses_documented
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
   - id: examples_present
     status: missed
+  - id: components_reuse
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: security_schemes_defined
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: security_applied
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: webhooks_or_callbacks
+    status: missed
+    detail: 0 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
   - id: asyncapi_present
     status: missed
-  - id: json_schema_present
-    status: missed
   - id: json_schema_per_resource
-    status: missed
-  - id: json_ld_present
     status: missed
   - id: json_ld_class_depth
     status: missed
@@ -49,14 +75,6 @@ kin_checks:
   - id: lifecycle_documented
     status: missed
   - id: domain_standard_conformance
-    status: missed
-  - id: rules_present
-    status: missed
-  - id: rules_substantial
-    status: missed
-  - id: balanced_severities
-    status: missed
-  - id: vocabulary_published
     status: missed
   - id: overlay_published
     status: missed
@@ -76,13 +94,9 @@ kin_checks:
     status: missed
   - id: api_reference_present
     status: missed
-  - id: getting_started_present
-    status: missed
   - id: authentication_documented
     status: missed
   - id: sdk_count_3
-    status: missed
-  - id: console_or_sandbox
     status: missed
   - id: postman_present
     status: missed
@@ -91,13 +105,8 @@ kin_checks:
   - id: support_channel
     status: missed
     detail: pointer liveness 0.0
-  - id: plans_present
-    status: missed
-  - id: plans_multiple
-    status: missed
   - id: pricing_link
     status: missed
-    detail: pointer liveness 0.0
   - id: terms_of_service
     status: missed
     detail: pointer liveness 0.0
@@ -144,17 +153,11 @@ kin_checks:
     status: missed
   - id: upsert_declared_conflict
     status: missed
-  - id: spec_presence
-    status: missed
   - id: agentic_access
-    status: missed
-  - id: reversibility_documented
     status: missed
   - id: mcp_server
     status: missed
   - id: auth_clarity
-    status: missed
-  - id: idempotency
     status: missed
   - id: error_semantics
     status: missed
@@ -172,8 +175,6 @@ kin_checks:
     status: missed
   - id: agent_card
     status: missed
-  - id: dry_run_mode
-    status: missed
   - id: delegated_identity
     status: missed
   - id: protected_resource_metadata
@@ -182,10 +183,79 @@ kin_checks:
     status: missed
   - id: agentic_commerce
     status: missed
+  - id: contract_present
+    status: partial
+    earned: 18.0
+  - id: openapi_3_2
+    status: partial
+    earned: 4.5
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: servers_defined
+    status: partial
+    earned: 2.7
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: operations_summary_coverage
+    status: partial
+    earned: 5.4
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: operations_tagged
+    status: partial
+    earned: 3.6
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: operations_operation_ids
+    status: partial
+    earned: 3.6
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: response_coverage
+    status: partial
+    earned: 4.5
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: oauth_flows_current
+    status: partial
+    earned: 3.6
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: credentials_not_in_query
+    status: partial
+    earned: 2.7
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: oauth_scopes_enumerated
+    status: partial
+    earned: 3.6
+    detail: 2 of 2 openapi documents pass; credited at 90% because of their provenance
+      (unknown)
+  - id: json_schema_present
+    status: partial
+    earned: 5.4
+  - id: rules_present
+    status: partial
+    earned: 9.0
+  - id: rules_substantial
+    status: partial
+    earned: 4.5
+  - id: balanced_severities
+    status: partial
+    earned: 2.7
+  - id: vocabulary_published
+    status: partial
+    earned: 4.5
   - id: github_org_present
     status: partial
     earned: 1.0
     detail: pointer liveness 0.5
+  - id: plans_present
+    status: partial
+    earned: 7.2
+  - id: plans_multiple
+    status: partial
+    earned: 3.6
   - id: sign_up_present
     status: partial
     earned: 2.5
@@ -193,28 +263,17 @@ kin_checks:
   na:
   - asyncapi_3_x
   - channels_defined
-  - components_reuse
   - contract_self_operated
-  - credentials_not_in_query
-  - error_responses_documented
+  - dry_run_mode
   - fhir_capability_statement
   - fhir_resource_coverage
   - graphql_descriptions
   - graphql_sdl_present
   - graphql_type_depth
+  - idempotency
   - inbound_contract_published
-  - info_complete
   - mcp_endpoint_discoverable
   - messages_with_schema
-  - oauth_flows_current
-  - oauth_scopes_enumerated
-  - openapi_3_0
-  - openapi_3_1
-  - openapi_3_2
-  - operations_description_coverage
-  - operations_operation_ids
-  - operations_summary_coverage
-  - operations_tagged
   - os_code_of_conduct
   - os_contribution_guide
   - os_releases
@@ -230,10 +289,6 @@ kin_checks:
   - reg_smart_configuration
   - reg_training_data_summary
   - reg_write_surface
-  - response_coverage
-  - security_applied
+  - reversibility_documented
   - security_schemes
-  - security_schemes_defined
   - server_bindings
-  - servers_defined
-  - webhooks_or_callbacks
