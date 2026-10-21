@@ -32,6 +32,7 @@ checked:
 - https://pypi.org/org/{org}/
 - https://pypi.org/pypi/{package}/json
 - jetbrains/integrations/jetbrains-integration-edges.yml
+- terraform/integrations/terraform-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -608,6 +609,28 @@ edges:
   category: IDE / developer extension marketplace listing
   badges:
   - Verified vendor
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/Keeper-Security/secretsmanager
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - Keeper-Security/secretsmanager
+  - Keeper-Security/keeper
+  - Keeper-Security/commander
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (Terraform partner tier)
+  - Verified publisher (GitHub domain-verified organization)
 source:
 - https://github.com/marketplace?type=actions
 - https://marketplace.atlassian.com/
