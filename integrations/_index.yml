@@ -508,3 +508,41 @@
     detected: '2026-10-21'
   status: not-a-workflow
   arazzo: null
+- slug: keeper-security-cve-program-cve-numbering-authorities
+  label: CVE Program (CVE Numbering Authorities)
+  partner_name: CVE Program (CVE Numbering Authorities)
+  category: Vulnerability disclosure (CVE Numbering Authority)
+  type: register
+  channel: standard-directory
+  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/KeeperSecurity
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
+    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
+    spec_file: null
+    role: cve-numbering-authority
+    registered_name: Keeper Security, Inc.
+    matched_domain: keepersecurity.com
+    matched_by: domain
+    cna_id: CNA-2023-0064
+    cna_short_name: KeeperSecurity
+    cna_types:
+    - Vendor
+    cna_roles:
+    - CNA
+    scope: Keeper Security products and services only.
+    top_level_root: MITRE Corporation
+    root: n/a
+    security_advisories:
+    - https://docs.keeper.io/release-notes/keeper-security/security-advisories
+    disclosure_policy:
+    - https://www.keepersecurity.com/security.html?s=reporting
+    - https://bugcrowd.com/keepersecurity
+    country: USA
+    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
+      publish advisories for its scope); never a count of CVEs
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
