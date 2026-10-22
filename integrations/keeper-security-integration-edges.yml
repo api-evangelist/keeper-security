@@ -42,6 +42,7 @@ checked:
 - https://csrc.nist.gov/projects/cryptographic-module-validation-program/modules-in-process/modules-in-process-list
 - https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search/all
 - https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Advanced&Standard=140-2&CertificateStatus=Historical&ValidationYear=0
+- artifact-hub/integrations/artifact-hub-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -470,6 +471,115 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-ide-extension-marketplaces.py
   first_seen: '2026-10-20'
+- partner_name: Mozilla Firefox Add-ons (AMO)
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: firefox-add-ons
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://addons.mozilla.org/en-US/firefox/addon/keeper-password-manager/
+  app: Keeper® Password Manager & Digital Vault
+  listing_count: 1
+  category: browser extension (Firefox Add-ons)
+  partner_url: https://addons.mozilla.org/
+  contract_reference:
+    register: 'Firefox Add-ons (addons.mozilla.org public API v5 search: authors, homepage, support_url)'
+    spec_file: null
+    role: firefox-add-on-publisher
+    registered_name: Keeper Security Inc.
+    register_id: https://addons.mozilla.org/api/v5/addons/addon/keeper-password-manager/
+    matched_domain: keepersecurity.com
+    matched_by: domain
+    matched_name: Keeper Security Inc.
+    builder: publisher
+    signal_note: ONE edge per provider for the store; listing alone = participation. The AMO author name (builder
+      publisher) or homepage + support_url both on the provider's domain (builder domain-attested) identifies it;
+      extension / user counts are context, never counted. No Mozilla repo in all/*, so no platform-side edge exists
+      to mirror.
+    detected_by: sweep-browser-extension-stores.py
+    detected: '2026-10-21'
+  detected_by: sweep-browser-extension-stores.py
+  first_seen: '2026-10-21'
+- partner_name: CVE Program (CVE Numbering Authorities)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/KeeperSecurity
+  category: Vulnerability disclosure (CVE Numbering Authority)
+  contract_reference:
+    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
+    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
+    spec_file: null
+    role: cve-numbering-authority
+    registered_name: Keeper Security, Inc.
+    matched_domain: keepersecurity.com
+    matched_by: domain
+    cna_id: CNA-2023-0064
+    cna_short_name: KeeperSecurity
+    cna_types:
+    - Vendor
+    cna_roles:
+    - CNA
+    scope: Keeper Security products and services only.
+    top_level_root: MITRE Corporation
+    root: n/a
+    security_advisories:
+    - https://docs.keeper.io/release-notes/keeper-security/security-advisories
+    disclosure_policy:
+    - https://www.keepersecurity.com/security.html?s=reporting
+    - https://bugcrowd.com/keepersecurity
+    country: USA
+    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
+      publish advisories for its scope); never a count of CVEs
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
+  detected_by: sweep-vulnerability-disclosure-cna.py
+  first_seen: '2026-10-22'
+- partner_name: NIST Cryptographic Module Validation Program (FIPS 140)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search/all
+  category: FIPS 140 cryptographic module validation (NIST / CCCS CMVP)
+  contract_reference:
+    register: 'NIST CMVP validated cryptographic modules (csrc.nist.gov validated-modules search: active + historical)
+      and Modules In Process list'
+    standard: FIPS 140-2 / FIPS 140-3
+    spec_file: null
+    role: fips-140-validated-vendor
+    registered_name: Keeper Security, Inc.
+    matched_domain: keepersecurity.com
+    matched_by: domain
+    signal_note: 'certified_products = one entry per (FIPS 140 edition, CMVP module type) held; a pair whose certificates
+      are all on the historical list is lapsed: true; Modules In Process are listing only (in_process), never certified;
+      certificate and module counts are context, never counted'
+    detected_by: sweep-nist-cmvp-fips-140-modules.py
+    detected: '2026-10-22'
+    certified_products:
+    - product: FIPS 140-2 Software cryptographic module
+      product_type: Software
+      standard: FIPS 140-2
+      status: Historical
+      lapsed: true
+      validated: '2021-07-27'
+    - product: FIPS 140-3 Software cryptographic module
+      product_type: Software
+      standard: FIPS 140-3
+      status: Active
+      lapsed: false
+      validated: '2025-02-27'
+    vendor_country: USA
+    identity_source: register website (CMVP certificate Vendor panel)
+  detected_by: sweep-nist-cmvp-fips-140-modules.py
+  first_seen: '2026-10-22'
 - partner_name: CrowdStrike (own)
   partner: crowdstrike
   partner_match: mirror
@@ -640,115 +750,26 @@ edges:
   badges:
   - Verified publisher (Terraform partner tier)
   - Verified publisher (GitHub domain-verified organization)
-- partner_name: Mozilla Firefox Add-ons (AMO)
-  partner: null
-  partner_match: null
+- partner_name: Artifact Hub (artifact-hub)
+  partner: artifact-hub
+  partner_match: mirror
+  mirror_match: domain
   type: marketplace
-  marketplace: firefox-add-ons
-  channel: partner-built
   relationship: platform-app
   direction: third-party
-  evidence: https://addons.mozilla.org/en-US/firefox/addon/keeper-password-manager/
-  app: Keeper® Password Manager & Digital Vault
+  channel: partner-built
+  marketplace: artifact-hub
+  evidence: https://artifacthub.io/packages/search?repo=keeper-injector
+  mirror_of: artifact-hub/integrations/artifact-hub-integration-edges.yml
+  apps:
+  - keeper-injector
+  - keeper-gateway
   listing_count: 1
-  category: browser extension (Firefox Add-ons)
-  partner_url: https://addons.mozilla.org/
-  contract_reference:
-    register: 'Firefox Add-ons (addons.mozilla.org public API v5 search: authors, homepage, support_url)'
-    spec_file: null
-    role: firefox-add-on-publisher
-    registered_name: Keeper Security Inc.
-    register_id: https://addons.mozilla.org/api/v5/addons/addon/keeper-password-manager/
-    matched_domain: keepersecurity.com
-    matched_by: domain
-    matched_name: Keeper Security Inc.
-    builder: publisher
-    signal_note: ONE edge per provider for the store; listing alone = participation. The AMO author name (builder
-      publisher) or homepage + support_url both on the provider's domain (builder domain-attested) identifies it;
-      extension / user counts are context, never counted. No Mozilla repo in all/*, so no platform-side edge exists
-      to mirror.
-    detected_by: sweep-browser-extension-stores.py
-    detected: '2026-10-21'
-  detected_by: sweep-browser-extension-stores.py
-  first_seen: '2026-10-21'
-- partner_name: CVE Program (CVE Numbering Authorities)
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/KeeperSecurity
-  category: Vulnerability disclosure (CVE Numbering Authority)
-  contract_reference:
-    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
-    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
-    spec_file: null
-    role: cve-numbering-authority
-    registered_name: Keeper Security, Inc.
-    matched_domain: keepersecurity.com
-    matched_by: domain
-    cna_id: CNA-2023-0064
-    cna_short_name: KeeperSecurity
-    cna_types:
-    - Vendor
-    cna_roles:
-    - CNA
-    scope: Keeper Security products and services only.
-    top_level_root: MITRE Corporation
-    root: n/a
-    security_advisories:
-    - https://docs.keeper.io/release-notes/keeper-security/security-advisories
-    disclosure_policy:
-    - https://www.keepersecurity.com/security.html?s=reporting
-    - https://bugcrowd.com/keepersecurity
-    country: USA
-    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
-      publish advisories for its scope); never a count of CVEs
-    detected_by: sweep-vulnerability-disclosure-cna.py
-    detected: '2026-10-22'
-  detected_by: sweep-vulnerability-disclosure-cna.py
-  first_seen: '2026-10-22'
-- partner_name: NIST Cryptographic Module Validation Program (FIPS 140)
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search/all
-  category: FIPS 140 cryptographic module validation (NIST / CCCS CMVP)
-  contract_reference:
-    register: 'NIST CMVP validated cryptographic modules (csrc.nist.gov validated-modules search: active + historical)
-      and Modules In Process list'
-    standard: FIPS 140-2 / FIPS 140-3
-    spec_file: null
-    role: fips-140-validated-vendor
-    registered_name: Keeper Security, Inc.
-    matched_domain: keepersecurity.com
-    matched_by: domain
-    signal_note: 'certified_products = one entry per (FIPS 140 edition, CMVP module type) held; a pair whose certificates
-      are all on the historical list is lapsed: true; Modules In Process are listing only (in_process), never certified;
-      certificate and module counts are context, never counted'
-    detected_by: sweep-nist-cmvp-fips-140-modules.py
-    detected: '2026-10-22'
-    certified_products:
-    - product: FIPS 140-2 Software cryptographic module
-      product_type: Software
-      standard: FIPS 140-2
-      status: Historical
-      lapsed: true
-      validated: '2021-07-27'
-    - product: FIPS 140-3 Software cryptographic module
-      product_type: Software
-      standard: FIPS 140-3
-      status: Active
-      lapsed: false
-      validated: '2025-02-27'
-    vendor_country: USA
-    identity_source: register website (CMVP certificate Vendor panel)
-  detected_by: sweep-nist-cmvp-fips-140-modules.py
-  first_seen: '2026-10-22'
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Artifact Hub listing (Helm chart)
+  badges:
+  - 'Verified publisher (Artifact Hub verified publisher: repository ownership proven)'
 source:
 - https://github.com/marketplace?type=actions
 - https://marketplace.atlassian.com/
