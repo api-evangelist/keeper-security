@@ -599,3 +599,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: keeper-security-ansible-ansible-galaxy
+  label: Ansible (ansible-galaxy)
+  partner: ansible
+  partner_name: Ansible (ansible-galaxy)
+  category: configuration-management content listing (Ansible collection)
+  type: marketplace
+  marketplace: ansible-galaxy
+  channel: partner-built
+  evidence: https://galaxy.ansible.com/ui/repo/published/keepersecurity/keeper_secrets_manager/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
