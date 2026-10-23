@@ -46,6 +46,9 @@ checked:
 - ansible/integrations/ansible-integration-edges.yml
 - https://store.servicenow.com/store/app/
 - https://store.servicenow.com/store/sitemap_xml
+- https://aur.archlinux.org/cgit/aur.git/tree/.SRCINFO
+- https://aur.archlinux.org/packages-meta-ext-v1.json.gz
+- https://aur.archlinux.org/rpc/v5/info
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -832,6 +835,40 @@ edges:
     detected_by: sweep-servicenow-store.py
     detected: '2026-10-23'
   detected_by: sweep-servicenow-store.py
+  first_seen: '2026-10-23'
+- partner_name: Arch User Repository (AUR)
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official CLI (Arch User Repository (AUR))
+  evidence: https://aur.archlinux.org/packages/keeper-commander
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Arch User Repository (AUR) (public package index)
+    spec_file: null
+    packages:
+    - name: keeper-commander
+      kind: aur
+      version: 1:17.2.0-1
+      released: '2025-12-13'
+      released_field: AUR LastModified
+      out_of_date: true
+      lapsed: true
+      page: https://aur.archlinux.org/packages/keeper-commander
+      upstream: https://github.com/Keeper-Security/Commander
+      cli: 'AUR description: CLI, SDK and interactive shell for Keeper® Password Manager.'
+      repo_leg: github-org:keeper-security
+      publisher_leg: artifact-github-org:keeper-security
+      matched_by: github-org
+    current: false
+    signal_note: 'the provider''s own command-line tool packaged for Arch Linux (community-maintained PKGBUILD whose
+      upstream and source artifact are the provider''s): distribution, not an integration; lapsed = flagged out-of-date
+      or not updated in 24 months'
+    detected_by: sweep-aur-vendor-cli-packages.py
+    detected: '2026-10-23'
+  detected_by: sweep-aur-vendor-cli-packages.py
   first_seen: '2026-10-23'
 source:
 - https://github.com/marketplace?type=actions
