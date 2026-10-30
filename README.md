@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Keeper Security is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment pipeline.
+Keeper Security is a zero-knowledge cybersecurity company providing an enterprise password manager, privileged access management (KeeperPAM), secrets management, and dark-web monitoring. For developers, Keeper exposes Keeper Secrets Manager (KSM) — a cloud-based, zero-knowledge platform for securing infrastructure secrets such as API keys, database passwords, and certificates — through a multi-language SDK family (Python, JavaScript/Node, Java/Kotlin, .NET, Go) and the Keeper Commander and KSM command-line interfaces. Keeper does not publish a public REST OpenAPI; integration happens via these SDKs/CLIs, a Commander Service Mode REST API, Terraform providers, and CI/CD plugins. Keeper is FedRAMP High and SOC 2 Type 2 certified with ISO 27001/27017/27018, FIPS 140-3, PCI DSS Level 1, HIPAA, and GDPR compliance.
 
-Backed by: insight-partners — https://www.keepersecurity.com/
+**Areas:** Company · Cybersecurity · Secrets Management · Password Manager · Privileged Access Management · Zero Knowledge · Security · SDK
+
+## Keeper Security on APIs.io
+
+Everything profiled for Keeper Security is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/keeper-security/](https://apis.io/providers/keeper-security/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Keeper Security Bi API](https://apis.io/apis/keeper-security/keeper-security-bi-api-api/) — The Bi Api API from Keeper Security — 1 operation(s) for bi api.
+- [Keeper Security Health API](https://apis.io/apis/keeper-security/keeper-security-health-api/) — The Health API from Keeper Security — 1 operation(s) for health.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (1)
+
+The data models the API reads and writes.
+
+- [GetBiApiV1ServicesPartnerCreateLicenseResponse](https://apis.io/schemas/keeper-security/keeper-security-get-bi-api-v1-services-partner-create-license-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Keeper Security Context](https://apis.io/jsonld/keeper-security/keeper-security-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Keeper Security API Rules](https://apis.io/rules/keeper-security/keeper-security-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Keeper Security Domain Security](https://apis.io/security/keeper-security/keeper-security-domain-security/)
+- [Keeper Security Trust Center](https://apis.io/security/keeper-security/keeper-security-trust-center/)
+- [Keeper Security Vulnerability Disclosure](https://apis.io/security/keeper-security/keeper-security-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Keeper Security Plans Pricing](https://apis.io/plans/keeper-security/keeper-security-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.keepersecurity.com/)
+- [Documentation](https://docs.keeper.io/home/)
+- [Getting started](https://www.keepersecurity.com/getting-started/)
+- [Pricing](https://www.keepersecurity.com/pricing/keeperpam/)
+- [Support](https://www.keepersecurity.com/support/)
+- [Blog](https://www.keepersecurity.com/blog/)
+- [Security](https://keepersecurity.com/security.html)
+- [Compliance](https://trust.keeper.io/)
+- [Terms of service](https://www.keepersecurity.com/legal/terms-of-use/)
+- [Privacy policy](https://www.keepersecurity.com/privacypolicy.html)
+- [GitHub](https://github.com/Keeper-Security)
+- [Status](https://statuspage.keeper.io/)
+
+## API Evangelist rating
+
+**Kin Score 44.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 17.8 |
+| Contract governance | 35.6 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 64.5 |
+
+**Agent readiness 15.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/keeper-security/](https://apis.io/providers/keeper-security/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Keeper Security: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/keeper-security/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
